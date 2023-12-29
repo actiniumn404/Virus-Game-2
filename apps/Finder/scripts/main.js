@@ -22,6 +22,6 @@ let events = () => {
     })
 }
 
-window.onload = () => {
+window.addEventListener("load", () => {
     events()
-}
+})
