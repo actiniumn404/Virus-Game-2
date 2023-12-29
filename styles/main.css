@@ -1,0 +1,89 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    /* Higher Res: https://512pixels.net/downloads/macos-wallpapers-6k/12-Dark.jpg */
+    background-image: url("../TheVirusGame2/assets/macbg.jpeg");
+    background-size: 100vw 100vh;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+nav#navbar{
+    background: #ead1e7;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+
+nav#navbar, #navbar__customize, #navbar__tools, #navbar__left{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar__btn{
+    font-size: 14px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.navbar__btn, .navbar__btn i{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar__btn:active, .navbar__btn:focus{
+    background: #d4b8cb;
+}
+
+.navbar__btn.header{
+    font-weight: 600;
+}
+
+#dock{
+    background: rgb(255, 255, 255, 0.2);
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    column-gap: 15px;
+    transition: 0.2s;
+    align-items: flex-end;
+    height: 73px !important;
+}
+
+.dock__app img{
+    height: 83px;
+    user-select: none;
+    transition: 0.2s;
+}
+
+#dock:hover img{
+    transition: none;
+}
+
+#dock:not(:hover) .dock__app img{
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.workspace{
+    border: 1px solid darkgray;
+    background: white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+
+iframe{
+    resize: auto;
+}

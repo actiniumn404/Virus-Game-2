@@ -1,0 +1,53 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css);
+
+:root{
+    --navbar-disabled: gray;
+}
+
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body{
+    margin: 0;
+    height: 100%;
+}
+
+nav{
+    padding: 12px;
+    background: black;
+}
+
+.navbar__action{
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+}
+
+#navbar__close{
+    background: #fd5f57;
+}
+
+#navbar__min{
+    background: #febc2d;
+}
+
+#navbar__max{
+    background: #28c840;
+}
+
+#navbar_actions{
+    display: flex;
+    column-gap: 8px;
+    width: fit-content;
+}
+
+html:not(:is(:focus, :focus-within)) #navbar_actions:not(:hover) .navbar__action{
+    background: var(--navbar-disabled) !important;
+}

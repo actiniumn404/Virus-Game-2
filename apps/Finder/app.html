@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../styles/app.css">
+    <script src="../../scripts/app.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <script>
+        let app = {
+            name: "Finder",
+            actions: {
+                "File": {},
+                "Edit": {},
+                "View": {},
+                "Go": {},
+                "Window": {},
+                "Help": {}
+            }
+        }
+    </script>
+</head>
+<body tabindex="0">
+<aside id="sidebar">
+    <nav>
+        <div id="navbar_actions">
+            <div id="navbar__close" class="navbar__action"></div>
+            <div id="navbar__min" class="navbar__action"></div>
+            <div id="navbar__max" class="navbar__action"></div>
+        </div>
+    </nav>
+    <div id="favorites" class="subclass">
+        <div class="label">Favorites</div>
+        <div class="content">
+            <div class="tab"> <div class="tab__icon"><i class="fa-solid fa-house"></i></div> <div class="tab__label">username</div> </div>
+            <div class="tab"> <div class="tab__icon"><i class="fa-solid fa-a"></i></div> <div class="tab__label">Applications</div> </div>
+            <div class="tab selected"> <div class="tab__icon"><i class="fa-solid fa-display"></i></div> <div class="tab__label">Desktop</div> </div>
+            <div class="tab"> <div class="tab__icon"><i class="fa-regular fa-file"></i></div> <div class="tab__label">Documents</div> </div>
+            <div class="tab"> <div class="tab__icon"><i class="fa-regular fa-circle-down"></i></div> <div class="tab__label">Downloads</div> </div>
+            <div class="tab"> <div class="tab__icon"><i class="fa-solid fa-film"></i></div> <div class="tab__label">Movies</div> </div>
+            <div class="tab"> <div class="tab__icon"><i class="fa-solid fa-music"></i></div> <div class="tab__label">Music</div> </div>
+
+        </div>
+    </div>
+</aside>
+<main>
+    <div id="control_panel">
+        <div id="control_panel_top">
+            <div class="left">
+                <div id="control_panel__travel">
+                    <div><i class="fa fa-angle-left"></i></div>
+                    <div><i class="fa fa-angle-right"></i></div>
+                </div>
+                <div id="control_panel__name">Folder Name</div>
+            </div>
+            <div class="right">
+                <div id="control_panel__display">
+                    <div class="control_panel__display_mode selected"><i class="fa-solid fa-table-cells-large"></i></div>
+                    <div class="control_panel__display_mode"><i class="fa-solid fa-list"></i></div>
+                    <div class="control_panel__display_mode"><i class="fa-solid fa-table-columns"></i></div>
+                    <div class="control_panel__display_mode"><i class="fa-regular fa-rectangle-list"></i></div>
+                </div>
+                <div id="control_panel__actions">
+                    <div class="control_panel__actions_action" id="c_p_action__filter"><i class="fa-solid fa-filter"></i></div>
+                    <div class="control_panel__actions_action" id="c_p_action__share"><i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+                    <div class="control_panel__actions_action" id="c_p_action__tag"><i class="fa-solid fa-tag"></i></div>
+                    <div class="control_panel__actions_action" id="c_p_action__more"><i class="fa-solid fa-angle-down"></i></div>
+                </div>
+                <div id="control_panel__find">
+                    <div id="control_panel__find_activate"><i class="fa-solid fa-search"></i></div>
+                    <!--<input id="control_panel__search" placeholder="Search">-->
+                </div>
+            </div>
+        </div>
+        <div id="control_panel_bottom">
+            Folder Name
+        </div>
+    </div>
+    <div id="items">
+        <div class="item selected"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+        <div class="item"><div class="item__icon"><img src="assets/folder.png" /></div> <div class="item__name">Test.txt</div></div>
+
+    </div>
+</main>
+</body>
+</html>
