@@ -118,13 +118,22 @@ main{
     border-radius: 8px;
     background: transparent;
     margin-left: auto;
+    cursor: default;
 }
 
 #control_panel__search:focus{
     outline: 2px solid #89aafb;
+    border: 1px solid #e4e2e6;
+    width: min(200px, 40vw);
+    background: #f9f3fa;
+    cursor: text;
 }
 
-#control_panel__search::placeholder{
+#control_panel__find_activate{
+    display: none;
+}
+
+#control_panel__search:focus{
     color: #b3b2b5;
 }
 
@@ -142,13 +151,13 @@ main{
     border-radius: 5px;
 }
 
-.control_panel__display_mode.selected, .control_panel__actions_action:hover, #control_panel__find_activate:hover,
-#control_panel__travel > div:hover{
+.control_panel__display_mode.selected, .control_panel__actions_action:hover,
+#control_panel__search:hover + #control_panel__find_activate, #control_panel__travel > div:hover{
     background: #ece6ed;
 }
 
-#control_panel__display:hover .control_panel__display_mode.selected, .control_panel__actions_action:active, #control_panel__find_activate:active,
-#control_panel__travel > div:active{
+#control_panel__display:hover .control_panel__display_mode.selected, .control_panel__actions_action:active,
+#control_panel__search:active + #control_panel__find_activate, #control_panel__travel > div:active{
     background: #d1ccd5;
 }
 
@@ -201,6 +210,25 @@ main{
     column-gap: 30px;
     row-gap: 10px;
     overflow: auto;
+}
+
+@media (max-width: 900px){
+    #control_panel__search{
+        position: absolute;
+        right: 20px;
+        z-index: 2;
+        border-color: transparent;
+        width: 30px;
+        transition: width 0.2s;
+    }
+
+    #control_panel__search:not(:focus)::placeholder{
+        color: transparent;
+    }
+
+    #control_panel__find_activate{
+        display: block;
+    }
 }
 
 @media (max-width: 760px){
@@ -315,8 +343,4 @@ main{
     #control_panel__travel{
         display: none;
     }
-}
-
-body{
-    resize: horizontal;
 }

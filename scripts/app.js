@@ -1,5 +1,4 @@
 window.addEventListener("load", ()=>{
-    console.log("successfully loaded")
     document.getElementById("navbar__close").onclick = ()=>{
         window.parent.postMessage({action: "CLOSE"})
     }
