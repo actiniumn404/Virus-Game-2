@@ -5,7 +5,7 @@
 body{
     background-color: black;
     /* Higher Res: https://512pixels.net/downloads/macos-wallpapers-6k/12-Dark.jpg */
-    background-image: url("../TheVirusGame2/assets/macbg.jpeg");
+    background-image: url("macbg.jpeg");
     background-size: 100vw 100vh;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
